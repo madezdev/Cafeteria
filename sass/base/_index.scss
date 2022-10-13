@@ -1,0 +1,32 @@
+@forward 'normalize';
+@forward 'globales';
+@forward 'variables';
+@forward 'tipografia';
+@forward 'mixins';
+@forward 'utilidades';
+
+//Header
+
+@forward 'header';
+@forward 'navegacion';
+@forward 'barra';
+
+//inicio
+@forward 'contenido';
+@forward 'iconos';
+@forward 'galeria';
+@forward 'menu';
+@forward 'testimoniales';
+
+//Footer
+@forward 'footer';
+
+
+//Nosotros
+@forward 'nosotros';
+
+//Proceso
+@forward 'proceso';
+
+//Contacto
+@forward 'contacto';

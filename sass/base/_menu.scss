@@ -1,0 +1,83 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.nuestro-menu {
+  padding: 15rem 2rem 20rem 2rem;
+  background-image: url(../../img/menu_arriba.svg),
+    url(../../img/menu_abajo.svg),
+    linear-gradient(to top, v.$primario, v.$primario);
+  background-repeat: no-repeat;
+  background-position: center 5rem, center 92%, 100%;
+  background-size: 200%;
+
+  @include m.tablet {
+    padding: 15rem 0 20rem 0;
+    background-size: 100%;
+  }
+  @include m.desktop {
+    background-size: 50%, 50%, 100%;
+  }
+}
+
+.grid-menu {
+  @include m.tablet {
+    @include m.grid(2, 2rem);
+  }
+}
+
+.menu {
+  h3 {
+    color: v.$blanco;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      margin: 0 0 2rem 0;
+      color: v.$blanco;
+      font-size: 2rem;
+
+      span {
+        display: block;
+        color: v.$secundario;
+        line-height: 1.5;
+      }
+    }
+    .precio {
+      font-size: 2.5rem;
+      font-weight: 700;
+      padding: 2rem;
+    }
+  }
+}
+
+.contenido-menu{
+
+  background-image: url(../../img/cafe.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  aspect-ratio: 3/8;
+
+  @include m.telefono{
+    aspect-ratio: 3/5;
+  }
+
+  @include m.tablet{
+    @include m.grid(2, v.$separacion);
+    aspect-ratio:16/6;
+    background-size: 40%;
+    background-position: bottom right;
+  }
+
+  .texto{
+    p{font-size: 2rem;}
+    
+  }
+}
